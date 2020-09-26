@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
-source ./.env.dev
-
 if [[ ! -d "./.venv" ]]; then
-  python3 -m venv $VIRTUALENVROOT
+  python3 -m venv .venv/
 fi
 
-source $VIRTUALENVROOT/bin/activate
+source .venv/bin/activate
 
 python -m pip install -r requirements/dev.txt
