@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-source ./.env.dev
-$PYTHONPATH main.py
+source .env.dev
+source $VIRTUALENVROOT/bin/activate
+python main.py

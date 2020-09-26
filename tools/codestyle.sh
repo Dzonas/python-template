@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
 source ./.env.dev
-$PYTHONPATH -m black --config $BLACKCONFIG ${1-"."}
-$PYTHONPATH -m isort --sp $ISORTCONFIG ${1-"."}
+source $VIRTUALENVROOT/bin/activate
+python -m black --config $BLACKCONFIG ${1-"."}
+python -m isort --sp $ISORTCONFIG ${1-"."}

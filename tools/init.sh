@@ -6,4 +6,6 @@ if [[ ! -d "./.venv" ]]; then
   python3 -m venv $VIRTUALENVROOT
 fi
 
-$PYTHONPATH -m pip install -r requirements/dev.txt
+source $VIRTUALENVROOT/bin/activate
+
+python -m pip install -r requirements/dev.txt
